@@ -16,7 +16,7 @@ class ArgocdAutopilot < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "cli-package"
+    system "make", "cli-package", "DEV_MODE=false"
     bin.install "dist/argocd-autopilot"
   end
 
